@@ -1,6 +1,10 @@
 /* Textos de la web en alemán, inglés y español. */
 const I18N = {
   es: {
+    "gallery.next": "Siguiente",
+    "gallery.prev": "Anterior",
+    "gallery.askMsg": "Hola, me interesa: {name}. ¿Podrían darme más información?",
+    "gallery.ask": "Preguntar por esta pieza",
     "about.photoAlt": "En nuestro stand, con una drusa de pirita peruana en las manos.",
     "about.photoCaption": "Pirita peruana, directa de los Andes",
     "events.photoAlt": "Visitantes mirando las bandejas de minerales y las tallas en nuestro stand de feria.",
@@ -22,19 +26,19 @@ const I18N = {
     "sale.both": "Por pieza y por kilo",
     "contact.mobileLabel": "Móvil / WhatsApp",
     "contact.addressLabel": "Dirección",
-    "nav.collection": "Colección", "nav.events": "Ferias", "nav.distributors": "Mayoristas",
+    "nav.collection": "Galería", "nav.events": "Ferias", "nav.distributors": "Mayoristas",
     "nav.about": "Nosotros", "nav.contact": "Contacto",
 
     "hero.eyebrow": "Mineralien aus Peru · Baviera",
     "hero.title": "Minerales de los Andes, seleccionados a mano para Europa",
     "hero.lead": "Zavaleta Mineralien trae a Europa minerales directamente del Perú: crisocola, rodocrosita, mangano calcita, pirita, ópalo andino, amazonita, dumortierita, serpentina y piedra para tallar. Desde Baviera, cerca de Múnich, los presentamos en las principales ferias europeas.",
-    "hero.cta1": "Ver colección", "hero.cta2": "Próximas ferias", "hero.next": "Próxima feria",
+    "hero.cta1": "Ver galería", "hero.cta2": "Próximas ferias", "hero.next": "Próxima feria",
 
     "stats.localities": "localidades peruanas", "stats.fairs": "ferias al año",
     "stats.countries": "países donde exponemos", "stats.direct": "idiomas para atenderte: DE · EN · ES",
 
-    "collection.eyebrow": "Colección", "collection.title": "Nuestros minerales",
-    "collection.lead": "Vendemos por pieza y al por mayor por kilo. Añade lo que te interese a tu lista de consulta y te respondemos con fotos, tamaños, precios y gastos de envío.",
+    "collection.eyebrow": "Galería", "collection.title": "Nuestros minerales",
+    "collection.lead": "Una muestra de los minerales y tallas que llevamos a las ferias. Toca una foto para verla en grande.",
     "collection.empty": "No hay resultados para tu búsqueda.",
     "cat.all": "Todo", "cat.collector": "Colección", "cat.cluster": "Drusas", "cat.crystal": "Cristales", "cat.decor": "Decoración",
     "search.placeholder": "Buscar mineral…",
@@ -94,6 +98,10 @@ const I18N = {
   },
 
   en: {
+    "gallery.next": "Next",
+    "gallery.prev": "Previous",
+    "gallery.askMsg": "Hello, I'm interested in: {name}. Could you send me more information?",
+    "gallery.ask": "Ask about this piece",
     "about.photoAlt": "At our booth, holding a Peruvian pyrite cluster.",
     "about.photoCaption": "Peruvian pyrite, straight from the Andes",
     "events.photoAlt": "Visitors browsing the mineral trays and carvings at our show booth.",
@@ -115,19 +123,19 @@ const I18N = {
     "sale.both": "By the piece and by the kilo",
     "contact.mobileLabel": "Mobile / WhatsApp",
     "contact.addressLabel": "Address",
-    "nav.collection": "Collection", "nav.events": "Shows", "nav.distributors": "Wholesale",
+    "nav.collection": "Gallery", "nav.events": "Shows", "nav.distributors": "Wholesale",
     "nav.about": "About", "nav.contact": "Contact",
 
     "hero.eyebrow": "Minerals from Peru · Bavaria",
     "hero.title": "Minerals from the Andes, hand-selected for Europe",
     "hero.lead": "Zavaleta Mineralien brings minerals straight from Peru to Europe: chrysocolla, rhodochrosite, mangano calcite, pyrite, Andean opal, amazonite, dumortierite, serpentine and carving stone. From our base in Bavaria, near Munich, we exhibit at Europe's leading shows.",
-    "hero.cta1": "View collection", "hero.cta2": "Upcoming shows", "hero.next": "Next show",
+    "hero.cta1": "View gallery", "hero.cta2": "Upcoming shows", "hero.next": "Next show",
 
     "stats.localities": "Peruvian localities", "stats.fairs": "shows per year",
     "stats.countries": "countries where we exhibit", "stats.direct": "languages we answer in: DE · EN · ES",
 
-    "collection.eyebrow": "Collection", "collection.title": "Our minerals",
-    "collection.lead": "We sell by the piece and wholesale by the kilo. Add what you like to your inquiry list and we'll reply with photos, sizes, prices and shipping costs.",
+    "collection.eyebrow": "Gallery", "collection.title": "Our minerals",
+    "collection.lead": "A selection of the minerals and carvings we bring to shows. Tap a photo to see it larger.",
     "collection.empty": "No results for your search.",
     "cat.all": "All", "cat.collector": "Collector", "cat.cluster": "Clusters", "cat.crystal": "Crystals", "cat.decor": "Decor",
     "search.placeholder": "Search minerals…",
@@ -187,6 +195,10 @@ const I18N = {
   },
 
   de: {
+    "gallery.next": "Weiter",
+    "gallery.prev": "Zurück",
+    "gallery.askMsg": "Hallo, ich interessiere mich für: {name}. Können Sie mir mehr Informationen schicken?",
+    "gallery.ask": "Nach diesem Stück fragen",
     "about.photoAlt": "An unserem Stand, mit einer peruanischen Pyritstufe in der Hand.",
     "about.photoCaption": "Peruanischer Pyrit, direkt aus den Anden",
     "events.photoAlt": "Besucher betrachten die Mineralienkisten und Schnitzereien an unserem Messestand.",
@@ -208,19 +220,19 @@ const I18N = {
     "sale.both": "Einzeln und nach Kilo",
     "contact.mobileLabel": "Mobil / WhatsApp",
     "contact.addressLabel": "Adresse",
-    "nav.collection": "Kollektion", "nav.events": "Messen", "nav.distributors": "Großhandel",
+    "nav.collection": "Galerie", "nav.events": "Messen", "nav.distributors": "Großhandel",
     "nav.about": "Über uns", "nav.contact": "Kontakt",
 
     "hero.eyebrow": "Mineralien aus Peru · Bayern",
     "hero.title": "Mineralien aus den Anden, handverlesen für Europa",
     "hero.lead": "Zavaleta Mineralien bringt Mineralien direkt aus Peru nach Europa: Chrysokoll, Rhodochrosit, Manganocalcit, Pyrit, Andenopal, Amazonit, Dumortierit, Serpentin und Schnitzstein. Von Bayern aus, nahe München, stellen wir auf den wichtigsten Messen Europas aus.",
-    "hero.cta1": "Kollektion ansehen", "hero.cta2": "Nächste Messen", "hero.next": "Nächste Messe",
+    "hero.cta1": "Galerie ansehen", "hero.cta2": "Nächste Messen", "hero.next": "Nächste Messe",
 
     "stats.localities": "peruanische Fundorte", "stats.fairs": "Messen pro Jahr",
     "stats.countries": "Länder, in denen wir ausstellen", "stats.direct": "Sprachen für Ihre Anfrage: DE · EN · ES",
 
-    "collection.eyebrow": "Kollektion", "collection.title": "Unsere Mineralien",
-    "collection.lead": "Wir verkaufen einzeln und im Großhandel nach Kilo. Legen Sie Ihre Auswahl auf die Anfrageliste — wir antworten mit Fotos, Größen, Preisen und Versandkosten.",
+    "collection.eyebrow": "Galerie", "collection.title": "Unsere Mineralien",
+    "collection.lead": "Eine Auswahl der Mineralien und Schnitzereien, die wir auf Messen zeigen. Tippen Sie auf ein Foto, um es groß zu sehen.",
     "collection.empty": "Keine Ergebnisse für Ihre Suche.",
     "cat.all": "Alle", "cat.collector": "Sammlerstufen", "cat.cluster": "Stufen & Drusen", "cat.crystal": "Kristalle", "cat.decor": "Deko",
     "search.placeholder": "Mineral suchen…",

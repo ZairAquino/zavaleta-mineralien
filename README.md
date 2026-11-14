@@ -4,7 +4,7 @@ Web estática (HTML + CSS + JS, sin dependencias) para un expositor de minerales
 Idiomas: alemán, inglés y español (se detecta el idioma del navegador).
 
 ## Secciones
-- **Colección** — catálogo con filtros, búsqueda y orden. Los clientes añaden piezas a una *lista de consulta* y la envían por email o WhatsApp.
+- **Galería** — fotos de los minerales y tallas, con filtro por tipo. Al tocar una foto se abre en grande con su descripción y un botón para preguntar por la pieza.
 - **Ferias** — próximas ferias con cuenta atrás, botón "añadir al calendario" (.ics) y "reservar piezas para esta feria". Las pasadas se archivan solas.
 - **Mayoristas** — bloque para captar tiendas y distribuidores.
 - **Nosotros** y **Contacto** (formulario).
@@ -20,7 +20,7 @@ Todo el contenido está en **`js/data.js`**:
 
 Los textos de la web están en `js/i18n.js`.
 
-**Fotos reales:** guarda las fotos en una carpeta `img/` y añade `photo: "img/nombre.jpg"` a cada producto. Sin foto se muestra una ilustración de cristal generada.
+**Fotos:** guarda las fotos en `img/` y añade `photo: "img/nombre.webp"` a cada pieza en `data.js`. Solo aparecen en la galería las piezas que tienen foto.
 
 ## Antes de publicar ⚠
 1. Datos de contacto ya puestos desde la tarjeta. Falta Instagram (opcional) y precios (`price`, si quieres mostrarlos).

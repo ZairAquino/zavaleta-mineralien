@@ -440,3 +440,31 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 }
 
 .section--wholesale .wholesale { margin-top: 0; }
+
+/* ---------- Galería de minerales ---------- */
+.gallery-filters { margin-bottom: 28px; }
+.gallery { columns: 3 280px; column-gap: 22px; }
+.gitem { break-inside: avoid; display: block; margin: 0 0 22px; background: var(--surface); border: 2px solid var(--text); border-radius: var(--radius); overflow: hidden; box-shadow: var(--pop); transition: transform .2s, box-shadow .2s; }
+.gitem:hover { transform: translate(-3px, -3px); box-shadow: var(--pop-lg); }
+.gitem__photo { display: block; width: 100%; padding: 0; border: 0; background: var(--surface-2); cursor: zoom-in; }
+.gitem__photo img { display: block; width: 100%; height: auto; }
+.gitem figcaption { display: grid; gap: 3px; padding: 12px 16px 14px; border-top: 2px solid var(--text); background: var(--surface); }
+.gitem__tag { font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--turq); }
+.gitem strong { font: 800 1.2rem/1.15 var(--display); letter-spacing: -.01em; }
+
+/* Visor */
+.modal__media.has-photo { background: #1f1424; }
+.lb-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--text); background: var(--surface); color: var(--text); font: 800 1.6rem/1 var(--sans); display: grid; place-items: center; padding-bottom: 3px; box-shadow: 3px 3px 0 var(--text); }
+.lb-nav:hover { background: var(--yellow); }
+.lb-nav--prev { left: 12px; }
+.lb-nav--next { right: 12px; }
+.lb-count { position: absolute; z-index: 2; left: 50%; bottom: 12px; transform: translateX(-50%); padding: .2em .8em; border-radius: 999px; background: rgba(42, 21, 48, .75); color: #fff; font-size: .78rem; font-weight: 700; }
+.modal__info .btn { margin-top: 4px; }
+@media (max-width: 600px) {
+  .gallery { columns: 2 150px; column-gap: 12px; }
+  .gitem { margin-bottom: 12px; box-shadow: 3px 3px 0 var(--text); }
+  .gitem figcaption { padding: 9px 11px 11px; }
+  .gitem__tag { font-size: .6rem; letter-spacing: .06em; }
+  .gitem strong { font-size: .98rem; }
+  .modal__media { min-height: 300px; }
+}

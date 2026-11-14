@@ -45,10 +45,6 @@
           <option value="nl">NL · Nederlands</option>
         </select>
       </label>
-      <button type="button" class="cart-btn" id="cartOpen" aria-label="Lista de consulta">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1.2 12.2a1 1 0 0 1-1 .8H8.2a1 1 0 0 1-1-.8L6 7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 7V6a3 3 0 0 1 6 0v1" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
-        <span class="cart-btn__count" id="cartCount">0</span>
-      </button>
       <button type="button" class="menu-btn" id="menuBtn" aria-label="Menú" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
@@ -87,7 +83,7 @@
   </div>
 </section>
 
-<!-- ============ COLECCIÓN ============ -->
+<!-- ============ GALERÍA ============ -->
 <section class="section" id="coleccion">
   <div class="container">
     <div class="section__head">
@@ -96,23 +92,9 @@
       <p class="lead" data-i18n="collection.lead"></p>
     </div>
 
-    <div class="toolbar">
-      <div class="chips" id="categoryChips" role="tablist"></div>
-      <div class="toolbar__right">
-        <label class="search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <input type="search" id="search" data-i18n-ph="search.placeholder" placeholder="Buscar…">
-        </label>
-        <select id="sort" aria-label="Ordenar">
-          <option value="featured" data-i18n="sort.featured">Destacados</option>
-          <option value="priceAsc" data-i18n="sort.priceAsc">Precio ↑</option>
-          <option value="priceDesc" data-i18n="sort.priceDesc">Precio ↓</option>
-        </select>
-      </div>
-    </div>
+    <div class="chips gallery-filters" id="categoryChips" role="tablist"></div>
 
-    <div class="grid products" id="products"></div>
-    <p class="empty" id="productsEmpty" hidden data-i18n="collection.empty"></p>
+    <div class="gallery" id="gallery"></div>
   </div>
 </section>
 
@@ -282,26 +264,7 @@
   </div>
 </footer>
 
-<!-- ============ DRAWER: lista de consulta ============ -->
-<div class="overlay" id="overlay" hidden></div>
-<aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="drawerTitle">
-  <div class="drawer__head">
-    <h2 id="drawerTitle" data-i18n="cart.title">Tu lista de consulta</h2>
-    <button type="button" class="icon-btn" id="cartClose" aria-label="Cerrar">✕</button>
-  </div>
-  <div class="drawer__body" id="cartItems"></div>
-  <div class="drawer__foot" id="cartFoot">
-    <div class="drawer__total"><span data-i18n="cart.total">Total orientativo</span><strong id="cartTotal">0 €</strong></div>
-    <p class="drawer__note" data-i18n="cart.note"></p>
-    <div class="drawer__actions">
-      <a class="btn btn--primary" id="cartEmail" href="#" data-i18n="cart.email">Enviar por email</a>
-      <a class="btn btn--ghost" id="cartWhatsapp" href="#" target="_blank" rel="noopener" data-i18n="cart.whatsapp">WhatsApp</a>
-    </div>
-    <button type="button" class="link-btn" id="cartClear" data-i18n="cart.clear">Vaciar lista</button>
-  </div>
-</aside>
-
-<!-- ============ MODAL: detalle de producto ============ -->
+<!-- ============ VISOR DE FOTOS ============ -->
 <dialog class="modal" id="productModal">
   <button type="button" class="icon-btn modal__close" id="modalClose" aria-label="Cerrar">✕</button>
   <div class="modal__inner" id="modalContent"></div>
