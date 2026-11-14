@@ -15,6 +15,7 @@ const CONFIG = {
   instagram: "",                               // ← pega aquí tu perfil si tienes (https://instagram.com/...)
   instagramHandle: "",
   currency: "EUR",
+  peruvianMinerals: 9,                         // cifra "minerales peruanos" de la portada (los de la tarjeta)
   /* Formulario: si pegas aquí un endpoint de Formspree (https://formspree.io/f/xxxx)
      los mensajes llegan directo a tu email. Vacío = abre el programa de correo. */
   formEndpoint: ""

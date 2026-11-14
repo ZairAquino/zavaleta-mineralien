@@ -104,11 +104,14 @@
   }
 
   /* ---------------- Catálogo ---------------- */
+  // Solo se muestran los productos que tienen foto (añade `photo` en data.js para que aparezca uno nuevo)
+  const CATALOG = PRODUCTS.filter((p) => p.photo);
+  const CATS = CATEGORIES.filter((c) => CATALOG.some((p) => p.category === c));
   const state = { cat: "all", q: "", sort: "featured" };
-  let cart = store.get("zm-cart", []).filter((id) => PRODUCTS.some((p) => p.id === id));
+  let cart = store.get("zm-cart", []).filter((id) => CATALOG.some((p) => p.id === id));
 
   function renderChips() {
-    $("#categoryChips").innerHTML = ["all", ...CATEGORIES].map((c) =>
+    $("#categoryChips").innerHTML = ["all", ...CATS].map((c) =>
       `<button type="button" class="chip" role="tab" aria-selected="${state.cat === c}" data-cat="${c}">${esc(t("cat." + c))}</button>`).join("");
   }
   $("#categoryChips").addEventListener("click", (e) => {
@@ -141,7 +144,7 @@
   }
 
   function renderProducts() {
-    let list = PRODUCTS.filter((p) =>
+    let list = CATALOG.filter((p) =>
       (state.cat === "all" || p.category === state.cat) &&
       (!state.q || [...Object.values(p.name), p.locality, p.id, ...Object.values(p.formats)].join(" ").toLowerCase().includes(state.q)));
     const order = { available: 0, reserved: 1, sold: 2 };
@@ -175,7 +178,7 @@
     if (open) { openModal(open.dataset.open); return; }
     const sim = e.target.closest("[data-similar]");
     if (sim) {
-      const p = PRODUCTS.find((x) => x.id === sim.dataset.similar);
+      const p = CATALOG.find((x) => x.id === sim.dataset.similar);
       closeModal();
       goContact("buy", `${t("card.askSimilar")}: ${L(p.name)} (${p.locality}, ${t("card.ref")} ${p.id})`);
     }
@@ -184,7 +187,7 @@
   /* ---------------- Modal de producto ---------------- */
   const modal = $("#productModal");
   function openModal(id) {
-    const p = PRODUCTS.find((x) => x.id === id); if (!p) return;
+    const p = CATALOG.find((x) => x.id === id); if (!p) return;
     $("#modalContent").innerHTML = `
       <div class="modal__media${p.photo ? " has-photo" : ""}" style="--glow:${p.color}">${media(p, "m" + p.id)}${statusBadge(p)}</div>
       <div class="modal__info">
@@ -227,7 +230,7 @@
   }
 
   function renderCart() {
-    const items = cart.map((id) => PRODUCTS.find((p) => p.id === id)).filter(Boolean);
+    const items = cart.map((id) => CATALOG.find((p) => p.id === id)).filter(Boolean);
     $("#cartCount").textContent = items.length;
     $("#cartCount").hidden = items.length === 0;
     $("#cartFoot").hidden = items.length === 0;
@@ -424,7 +427,7 @@
   /* ---------------- Inicio ---------------- */
   function renderAll() {
     renderChips(); renderProducts(); renderCart(); renderEvents(); renderDistributors(); renderContact();
-    $("#statMinerals").textContent = PRODUCTS.filter((p) => !p.mixed && p.locality === "Perú").length;
+    $("#statMinerals").textContent = CONFIG.peruvianMinerals;
     const yr = today.getFullYear();
     $("#statFairs").textContent = Math.max(EVENTS.filter((e) => e.start.startsWith(String(yr + 1))).length, EVENTS.filter((e) => e.start.startsWith(String(yr))).length);
     $("#statCountries").textContent = new Set(DISTRIBUTORS.map((d) => d.country)).size;
