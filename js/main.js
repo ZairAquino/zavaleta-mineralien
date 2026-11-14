@@ -334,32 +334,6 @@
     if (topic) { $("#topic").value = topic.dataset.topic; }
   });
 
-  /* ---------------- Distribuidores ---------------- */
-  let country = "all";
-  function renderDistributors() {
-    const countries = [...new Map(DISTRIBUTORS.map((d) => [d.country, d.flag])).entries()];
-    $("#countryChips").innerHTML = [["all", ""], ...countries].map(([c, f]) =>
-      `<button type="button" class="chip" aria-pressed="${country === c}" data-country="${c}">${f ? f + " " : ""}${c === "all" ? t("dist.all") : regionName(c)}</button>`).join("");
-    $("#distributors").innerHTML = DISTRIBUTORS.filter((d) => country === "all" || d.country === country).map((d) => `
-      <article class="dist">
-        <div class="dist__top"><span class="dist__flag">${d.flag}</span><span class="badge badge--type">${t("dist.type." + d.type)}</span>
-        ${d.placeholder ? `<span class="badge badge--sample">${t("dist.sample")}</span>` : ""}</div>
-        <h3>${esc(d.name)}</h3>
-        <p class="dist__city">${esc(d.city)}, ${regionName(d.country)}</p>
-        <div class="dist__links">
-          ${d.contact ? `<a href="mailto:${esc(d.contact)}">${esc(d.contact)}</a>` : ""}
-          ${d.web ? `<a href="${esc(d.web)}" target="_blank" rel="noopener">${esc(d.web.replace(/^https?:\/\//, ""))} ↗</a>` : ""}
-        </div>
-      </article>`).join("");
-  }
-  function regionName(code) {
-    try { return new Intl.DisplayNames([locale()], { type: "region" }).of(code); } catch { return code; }
-  }
-  $("#countryChips").addEventListener("click", (e) => {
-    const b = e.target.closest("[data-country]"); if (!b) return;
-    country = b.dataset.country; renderDistributors();
-  });
-
   /* ---------------- Contacto ---------------- */
   function goContact(topic, message) {
     setDrawer(false);
@@ -426,11 +400,11 @@
 
   /* ---------------- Inicio ---------------- */
   function renderAll() {
-    renderChips(); renderProducts(); renderCart(); renderEvents(); renderDistributors(); renderContact();
+    renderChips(); renderProducts(); renderCart(); renderEvents(); renderContact();
     $("#statMinerals").textContent = CONFIG.peruvianMinerals;
     const yr = today.getFullYear();
     $("#statFairs").textContent = Math.max(EVENTS.filter((e) => e.start.startsWith(String(yr + 1))).length, EVENTS.filter((e) => e.start.startsWith(String(yr))).length);
-    $("#statCountries").textContent = new Set(DISTRIBUTORS.map((d) => d.country)).size;
+    $("#statCountries").textContent = new Set(EVENTS.map((e) => e.country)).size;
   }
   $("#year").textContent = new Date().getFullYear();
   applyLang();

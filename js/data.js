@@ -262,24 +262,3 @@ const EVENTS = [
     booth: "", status: "tbc", url: "https://munichshow.com"
   }
 ];
-
-/* ---------- Distribuidores ----------
-   type: "shop" | "wholesale" | "gallery" | "online"
-   placeholder: true muestra la etiqueta "Ejemplo" — bórrala al poner datos reales.
-*/
-const DISTRIBUTORS = [
-  { name: "Kristallgalerie Schwabing", city: "München", country: "DE", flag: "🇩🇪", type: "gallery",
-    contact: "kontakt@example.de", web: "", placeholder: true },
-  { name: "Steinreich Hamburg", city: "Hamburg", country: "DE", flag: "🇩🇪", type: "shop",
-    contact: "info@example.de", web: "", placeholder: true },
-  { name: "Krystal Praha s.r.o.", city: "Praha", country: "CZ", flag: "🇨🇿", type: "wholesale",
-    contact: "obchod@example.cz", web: "", placeholder: true },
-  { name: "Minerály Brno", city: "Brno", country: "CZ", flag: "🇨🇿", type: "shop",
-    contact: "info@example.cz", web: "", placeholder: true },
-  { name: "Cristaux d'Alsace", city: "Strasbourg", country: "FR", flag: "🇫🇷", type: "shop",
-    contact: "contact@example.fr", web: "", placeholder: true },
-  { name: "Galerie Minérale Paris", city: "Paris", country: "FR", flag: "🇫🇷", type: "gallery",
-    contact: "bonjour@example.fr", web: "", placeholder: true },
-  { name: "Andes Stones Online", city: "Wien", country: "AT", flag: "🇦🇹", type: "online",
-    contact: "office@example.at", web: "", placeholder: true }
-];

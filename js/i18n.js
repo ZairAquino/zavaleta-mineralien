@@ -22,7 +22,7 @@ const I18N = {
     "sale.both": "Por pieza y por kilo",
     "contact.mobileLabel": "Móvil / WhatsApp",
     "contact.addressLabel": "Dirección",
-    "nav.collection": "Colección", "nav.events": "Ferias", "nav.distributors": "Distribuidores",
+    "nav.collection": "Colección", "nav.events": "Ferias", "nav.distributors": "Mayoristas",
     "nav.about": "Nosotros", "nav.contact": "Contacto",
 
     "hero.eyebrow": "Mineralien aus Peru · Baviera",
@@ -31,7 +31,7 @@ const I18N = {
     "hero.cta1": "Ver colección", "hero.cta2": "Próximas ferias", "hero.next": "Próxima feria",
 
     "stats.localities": "localidades peruanas", "stats.fairs": "ferias al año",
-    "stats.countries": "países con distribuidores", "stats.direct": "idiomas para atenderte: DE · EN · ES",
+    "stats.countries": "países donde exponemos", "stats.direct": "idiomas para atenderte: DE · EN · ES",
 
     "collection.eyebrow": "Colección", "collection.title": "Nuestros minerales",
     "collection.lead": "Vendemos por pieza y al por mayor por kilo. Añade lo que te interese a tu lista de consulta y te respondemos con fotos, tamaños, precios y gastos de envío.",
@@ -115,7 +115,7 @@ const I18N = {
     "sale.both": "By the piece and by the kilo",
     "contact.mobileLabel": "Mobile / WhatsApp",
     "contact.addressLabel": "Address",
-    "nav.collection": "Collection", "nav.events": "Shows", "nav.distributors": "Distributors",
+    "nav.collection": "Collection", "nav.events": "Shows", "nav.distributors": "Wholesale",
     "nav.about": "About", "nav.contact": "Contact",
 
     "hero.eyebrow": "Minerals from Peru · Bavaria",
@@ -124,7 +124,7 @@ const I18N = {
     "hero.cta1": "View collection", "hero.cta2": "Upcoming shows", "hero.next": "Next show",
 
     "stats.localities": "Peruvian localities", "stats.fairs": "shows per year",
-    "stats.countries": "countries with distributors", "stats.direct": "languages we answer in: DE · EN · ES",
+    "stats.countries": "countries where we exhibit", "stats.direct": "languages we answer in: DE · EN · ES",
 
     "collection.eyebrow": "Collection", "collection.title": "Our minerals",
     "collection.lead": "We sell by the piece and wholesale by the kilo. Add what you like to your inquiry list and we'll reply with photos, sizes, prices and shipping costs.",
@@ -208,7 +208,7 @@ const I18N = {
     "sale.both": "Einzeln und nach Kilo",
     "contact.mobileLabel": "Mobil / WhatsApp",
     "contact.addressLabel": "Adresse",
-    "nav.collection": "Kollektion", "nav.events": "Messen", "nav.distributors": "Händler",
+    "nav.collection": "Kollektion", "nav.events": "Messen", "nav.distributors": "Großhandel",
     "nav.about": "Über uns", "nav.contact": "Kontakt",
 
     "hero.eyebrow": "Mineralien aus Peru · Bayern",
@@ -217,7 +217,7 @@ const I18N = {
     "hero.cta1": "Kollektion ansehen", "hero.cta2": "Nächste Messen", "hero.next": "Nächste Messe",
 
     "stats.localities": "peruanische Fundorte", "stats.fairs": "Messen pro Jahr",
-    "stats.countries": "Länder mit Händlern", "stats.direct": "Sprachen für Ihre Anfrage: DE · EN · ES",
+    "stats.countries": "Länder, in denen wir ausstellen", "stats.direct": "Sprachen für Ihre Anfrage: DE · EN · ES",
 
     "collection.eyebrow": "Kollektion", "collection.title": "Unsere Mineralien",
     "collection.lead": "Wir verkaufen einzeln und im Großhandel nach Kilo. Legen Sie Ihre Auswahl auf die Anfrageliste — wir antworten mit Fotos, Größen, Preisen und Versandkosten.",

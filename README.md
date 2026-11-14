@@ -6,7 +6,7 @@ Idiomas: alemán, inglés y español (se detecta el idioma del navegador).
 ## Secciones
 - **Colección** — catálogo con filtros, búsqueda y orden. Los clientes añaden piezas a una *lista de consulta* y la envían por email o WhatsApp.
 - **Ferias** — próximas ferias con cuenta atrás, botón "añadir al calendario" (.ics) y "reservar piezas para esta feria". Las pasadas se archivan solas.
-- **Distribuidores** — socios por país + bloque para captar mayoristas.
+- **Mayoristas** — bloque para captar tiendas y distribuidores.
 - **Nosotros** y **Contacto** (formulario).
 
 ## Cómo editar
@@ -17,7 +17,6 @@ Todo el contenido está en **`js/data.js`**:
 | Email, teléfono, WhatsApp, Instagram | `CONFIG` |
 | Piezas (nombre, localidad, precio, estado) | `PRODUCTS` |
 | Ferias | `EVENTS` |
-| Distribuidores | `DISTRIBUTORS` |
 
 Los textos de la web están en `js/i18n.js`.
 
@@ -26,7 +25,6 @@ Los textos de la web están en `js/i18n.js`.
 ## Antes de publicar ⚠
 1. Datos de contacto ya puestos desde la tarjeta. Falta Instagram (opcional) y precios (`price`, si quieres mostrarlos).
 2. **Comprueba las fechas de las ferias** con cada organizador — las de `EVENTS` son orientativas.
-3. Sustituye los **distribuidores de ejemplo** (llevan `placeholder: true` y se ven con la etiqueta "Ejemplo").
 4. En `impressum.html` falta la USt-IdNr. (Impressum y Datenschutz son obligatorios en Alemania).
 5. Formulario: crea una cuenta gratuita en [Formspree](https://formspree.io) y pega el endpoint en `CONFIG.formEndpoint`. Sin eso, el formulario abre el programa de correo del visitante.
 
