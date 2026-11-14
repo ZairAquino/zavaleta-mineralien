@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zavaleta Mineralien · Mineralien aus Peru</title>
+  <meta name="description" content="Zavaleta Mineralien aus Peru — Victor Zavaleta. Crisocola, mangano calcita, pirita, rodocrosita, ópalo andino, amazonita, dumortierita, serpentina y piedra para tallar. Ferias en Alemania, Chequia y Francia.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M12 2h8v6h4v4h6v8h-6v4h-4v6h-8v-6H8v-4H2v-8h6V8h4z' fill='%23e0267d'/%3E%3Cpolygon points='16,9 23,16 16,23 9,16' fill='%23ffc42e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a href="#top" class="logo" aria-label="Zavaleta Mineralien">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 2h8v6h4v4h6v8h-6v4h-4v6h-8v-6H8v-4H2v-8h6V8h4z" fill="#e0267d" stroke="#2a1530" stroke-width="1.6" stroke-linejoin="round"/><polygon points="16,9 23,16 16,23 9,16" fill="#ffc42e" stroke="#2a1530" stroke-width="1.4"/><circle cx="16" cy="16" r="2.6" fill="#0fa3a3"/></svg>
+      <span class="logo__text"><strong>Zavaleta</strong> Mineralien</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#coleccion" data-i18n="nav.collection">Colección</a>
+      <a href="#eventos" data-i18n="nav.events">Ferias</a>
+      <a href="#distribuidores" data-i18n="nav.distributors">Distribuidores</a>
+      <a href="#nosotros" data-i18n="nav.about">Nosotros</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
+
+    <div class="header__actions">
+      <label class="lang">
+        <span class="sr-only">Sprache / Language / Idioma</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span class="lang__code" id="langCode" aria-hidden="true">DE</span>
+        <select id="langSelect">
+          <option value="de">DE · Deutsch</option>
+          <option value="en">EN · English</option>
+          <option value="es">ES · Español</option>
+          <option value="fr">FR · Français</option>
+          <option value="it">IT · Italiano</option>
+          <option value="cs">CS · Čeština</option>
+          <option value="pl">PL · Polski</option>
+          <option value="nl">NL · Nederlands</option>
+        </select>
+      </label>
+      <button type="button" class="cart-btn" id="cartOpen" aria-label="Lista de consulta">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1.2 12.2a1 1 0 0 1-1 .8H8.2a1 1 0 0 1-1-.8L6 7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 7V6a3 3 0 0 1 6 0v1" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+        <span class="cart-btn__count" id="cartCount">0</span>
+      </button>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Minerales del Perú · München</p>
+      <h1 data-i18n="hero.title">Cristales de los Andes, seleccionados a mano para Europa</h1>
+      <p class="lead" data-i18n="hero.lead"></p>
+      <div class="hero__ctas">
+        <a href="#coleccion" class="btn btn--primary" data-i18n="hero.cta1">Ver colección</a>
+        <a href="#eventos" class="btn btn--ghost" data-i18n="hero.cta2">Próximas ferias</a>
+      </div>
+      <a href="#eventos" class="next-event" id="nextEvent" hidden></a>
+    </div>
+    <figure class="hero__photo">
+      <img src="img/stand-feria.webp" width="1200" height="900" fetchpriority="high" decoding="async" data-i18n-alt="hero.photoAlt" alt="Stand de Zavaleta Mineralien en una feria de minerales">
+      <figcaption data-i18n="hero.photoCaption">Nuestro stand en feria</figcaption>
+    </figure>
+  </div>
+
+  <div class="container">
+    <ul class="stats">
+      <li><strong id="statMinerals">0</strong><span data-i18n="stats.minerals">minerales peruanos</span></li>
+      <li><strong id="statFairs">0</strong><span data-i18n="stats.fairs">ferias al año</span></li>
+      <li><strong id="statCountries">0</strong><span data-i18n="stats.countries">países con distribuidores</span></li>
+      <li><strong>3</strong><span data-i18n="stats.direct">idiomas para atenderte</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ COLECCIÓN ============ -->
+<section class="section" id="coleccion">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow" data-i18n="collection.eyebrow">Colección</p>
+      <h2 data-i18n="collection.title">Especímenes disponibles</h2>
+      <p class="lead" data-i18n="collection.lead"></p>
+    </div>
+
+    <div class="toolbar">
+      <div class="chips" id="categoryChips" role="tablist"></div>
+      <div class="toolbar__right">
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input type="search" id="search" data-i18n-ph="search.placeholder" placeholder="Buscar…">
+        </label>
+        <select id="sort" aria-label="Ordenar">
+          <option value="featured" data-i18n="sort.featured">Destacados</option>
+          <option value="priceAsc" data-i18n="sort.priceAsc">Precio ↑</option>
+          <option value="priceDesc" data-i18n="sort.priceDesc">Precio ↓</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid products" id="products"></div>
+    <p class="empty" id="productsEmpty" hidden data-i18n="collection.empty"></p>
+  </div>
+</section>
+
+<!-- ============ EVENTOS ============ -->
+<section class="section section--alt" id="eventos">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow" data-i18n="events.eyebrow">Ferias y eventos</p>
+      <h2 data-i18n="events.title">Dónde encontrarnos</h2>
+      <p class="lead" data-i18n="events.lead"></p>
+    </div>
+
+    <div class="route" aria-hidden="true">
+      <span class="route__stop route__stop--origin">🇵🇪 Perú</span>
+      <span class="route__line"></span>
+      <span class="route__stop route__stop--home">🇩🇪 Bayern</span>
+      <span class="route__line"></span>
+      <span class="route__stop">🇩🇪 München</span>
+      <span class="route__line"></span>
+      <span class="route__stop">🇨🇿 Praha</span>
+      <span class="route__line"></span>
+      <span class="route__stop">🇫🇷 Sainte-Marie</span>
+      <span class="route__line"></span>
+      <span class="route__stop">🇦🇹 Wien</span>
+    </div>
+
+    <div class="events-layout">
+      <figure class="photo photo--events">
+        <img src="img/stand-visitantes.webp" width="1200" height="896" loading="lazy" decoding="async" data-i18n-alt="events.photoAlt" alt="">
+        <figcaption data-i18n="events.photoCaption"></figcaption>
+      </figure>
+      <div class="events" id="events"></div>
+    </div>
+
+    <div class="showroom">
+      <div>
+        <h3 data-i18n="events.showroomTitle">Showroom en Múnich</h3>
+        <p data-i18n="events.showroomText"></p>
+      </div>
+      <a href="#contacto" class="btn btn--ghost" data-topic="event" data-i18n="events.showroomCta">Pedir cita</a>
+    </div>
+
+    <details class="past" id="pastWrap" hidden>
+      <summary data-i18n="events.past">Ferias anteriores</summary>
+      <ul id="pastEvents"></ul>
+    </details>
+  </div>
+</section>
+
+<!-- ============ DISTRIBUIDORES ============ -->
+<section class="section" id="distribuidores">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow" data-i18n="dist.eyebrow">Distribuidores</p>
+      <h2 data-i18n="dist.title">Nuestros socios en Europa</h2>
+      <p class="lead" data-i18n="dist.lead"></p>
+    </div>
+
+    <div class="chips" id="countryChips"></div>
+    <div class="grid distributors" id="distributors"></div>
+
+    <div class="wholesale">
+      <figure class="photo photo--wholesale">
+        <img src="img/stand-bandejas.webp" width="1200" height="896" loading="lazy" decoding="async" data-i18n-alt="dist.photoAlt" alt="">
+        <figcaption data-i18n="dist.photoCaption"></figcaption>
+      </figure>
+      <div class="wholesale__copy">
+        <h3 data-i18n="dist.becomeTitle">¿Quieres distribuir minerales peruanos?</h3>
+        <p data-i18n="dist.becomeText"></p>
+        <ul class="checks">
+          <li data-i18n="dist.perk1"></li>
+          <li data-i18n="dist.perk2"></li>
+          <li data-i18n="dist.perk3"></li>
+          <li data-i18n="dist.perk4"></li>
+        </ul>
+      </div>
+      <a href="#contacto" class="btn btn--primary" data-topic="distribution" data-i18n="dist.becomeCta">Solicitar condiciones</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOSOTROS ============ -->
+<section class="section section--alt" id="nosotros">
+  <div class="container about">
+    <figure class="photo photo--about">
+      <img src="img/victor-pirita.webp" width="720" height="960" loading="lazy" decoding="async" data-i18n-alt="about.photoAlt" alt="">
+      <figcaption data-i18n="about.photoCaption"></figcaption>
+    </figure>
+    <div class="about__copy">
+      <p class="eyebrow" data-i18n="about.eyebrow">Nosotros</p>
+      <h2 data-i18n="about.title">Del Ande a Múnich</h2>
+      <p data-i18n="about.p1"></p>
+      <p data-i18n="about.p2"></p>
+    </div>
+    <ul class="values">
+      <li>
+        <span class="values__icon">◆</span>
+        <h3 data-i18n="about.v1t">Origen trazable</h3>
+        <p data-i18n="about.v1"></p>
+      </li>
+      <li>
+        <span class="values__icon">◇</span>
+        <h3 data-i18n="about.v2t">Selección experta</h3>
+        <p data-i18n="about.v2"></p>
+      </li>
+      <li>
+        <span class="values__icon">▣</span>
+        <h3 data-i18n="about.v3t">Envío seguro</h3>
+        <p data-i18n="about.v3"></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section" id="contacto">
+  <div class="container contact">
+    <div class="contact__info">
+      <p class="eyebrow" data-i18n="contact.eyebrow">Contacto</p>
+      <h2 data-i18n="contact.title">Hablemos</h2>
+      <p class="lead" data-i18n="contact.lead"></p>
+      <ul class="contact__list">
+        <li><span data-i18n="contact.emailLabel">Email</span><a id="cEmail" href="#"></a></li>
+        <li><span data-i18n="contact.mobileLabel">Móvil / WhatsApp</span><a id="cMobile" href="#" target="_blank" rel="noopener"></a></li>
+        <li><span data-i18n="contact.phoneLabel">Teléfono</span><a id="cPhone" href="#"></a></li>
+        <li><span data-i18n="contact.addressLabel">Dirección</span><span><strong id="cOwner"></strong><br><span id="cAddress"></span></span></li>
+        <li><span>Instagram</span><a id="cInstagram" href="#" target="_blank" rel="noopener"></a></li>
+      </ul>
+    </div>
+
+    <form class="form" id="contactForm" novalidate>
+      <div class="form__row">
+        <label><span data-i18n="form.name">Nombre</span>
+          <input name="name" required autocomplete="name"></label>
+        <label><span data-i18n="form.email">Email</span>
+          <input name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <div class="form__row">
+        <label><span data-i18n="form.company">Empresa (opcional)</span>
+          <input name="company" autocomplete="organization"></label>
+        <label><span data-i18n="form.topic">Motivo</span>
+          <select name="topic" id="topic">
+            <option value="buy" data-i18n="form.topicBuy">Comprar piezas</option>
+            <option value="distribution" data-i18n="form.topicDist">Distribución / mayorista</option>
+            <option value="event" data-i18n="form.topicEvent">Ferias / visita al showroom</option>
+            <option value="other" data-i18n="form.topicOther">Otro</option>
+          </select></label>
+      </div>
+      <label><span data-i18n="form.message">Mensaje</span>
+        <textarea name="message" id="message" rows="6" required></textarea></label>
+      <label class="form__check">
+        <input type="checkbox" name="privacy" required>
+        <span data-i18n="form.privacy"></span>
+      </label>
+      <button class="btn btn--primary" type="submit" data-i18n="form.send">Enviar mensaje</button>
+      <p class="form__status" id="formStatus" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <a href="#top" class="logo">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 2h8v6h4v4h6v8h-6v4h-4v6h-8v-6H8v-4H2v-8h6V8h4z" fill="#e0267d" stroke="#2a1530" stroke-width="1.6" stroke-linejoin="round"/><polygon points="16,9 23,16 16,23 9,16" fill="#ffc42e" stroke="#2a1530" stroke-width="1.4"/><circle cx="16" cy="16" r="2.6" fill="#0fa3a3"/></svg>
+        <span class="logo__text"><strong>Zavaleta</strong> Mineralien</span>
+      </a>
+      <p class="footer__tag" data-i18n="footer.tag">Minerales del Perú · München</p>
+    </div>
+    <nav class="footer__links">
+      <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+      <a href="impressum.html#datenschutz" data-i18n="footer.privacy">Privacidad</a>
+    </nav>
+    <p class="footer__copy">© <span id="year"></span> Zavaleta Mineralien · Victor Zavaleta Management</p>
+  </div>
+</footer>
+
+<!-- ============ DRAWER: lista de consulta ============ -->
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="drawerTitle">
+  <div class="drawer__head">
+    <h2 id="drawerTitle" data-i18n="cart.title">Tu lista de consulta</h2>
+    <button type="button" class="icon-btn" id="cartClose" aria-label="Cerrar">✕</button>
+  </div>
+  <div class="drawer__body" id="cartItems"></div>
+  <div class="drawer__foot" id="cartFoot">
+    <div class="drawer__total"><span data-i18n="cart.total">Total orientativo</span><strong id="cartTotal">0 €</strong></div>
+    <p class="drawer__note" data-i18n="cart.note"></p>
+    <div class="drawer__actions">
+      <a class="btn btn--primary" id="cartEmail" href="#" data-i18n="cart.email">Enviar por email</a>
+      <a class="btn btn--ghost" id="cartWhatsapp" href="#" target="_blank" rel="noopener" data-i18n="cart.whatsapp">WhatsApp</a>
+    </div>
+    <button type="button" class="link-btn" id="cartClear" data-i18n="cart.clear">Vaciar lista</button>
+  </div>
+</aside>
+
+<!-- ============ MODAL: detalle de producto ============ -->
+<dialog class="modal" id="productModal">
+  <button type="button" class="icon-btn modal__close" id="modalClose" aria-label="Cerrar">✕</button>
+  <div class="modal__inner" id="modalContent"></div>
+</dialog>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
