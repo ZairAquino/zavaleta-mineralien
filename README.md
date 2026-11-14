@@ -57,8 +57,10 @@ Todo se guarda en **Vercel Blob** (almacén `zavaleta-media`) y la web lo muestr
 Cada vez que se guarda se crea además una copia en `backups/`.
 
 ### Configuración (una sola vez)
+El usuario es **zavaleta3** (se puede cambiar con la variable `ADMIN_USER`).
 1. En Vercel → proyecto *zavaleta-mineralien* → **Settings → Environment Variables**, crea
-   `ADMIN_PASSWORD` (mínimo 8 caracteres) para *Production*.
+   `ADMIN_PASSWORD` (mínimo 8 caracteres) para *Production*. O desde la terminal, en esta carpeta:
+   `vercel env add ADMIN_PASSWORD production` (te pide la contraseña sin mostrarla).
 2. Vuelve a desplegar (Deployments → ⋯ → Redeploy) para que la tome.
 3. Para cambiar la contraseña: edita la variable y vuelve a desplegar (las sesiones abiertas se cierran solas).
 

@@ -1,4 +1,5 @@
 /* Sesión del administrador: una cookie firmada (HMAC) que dura 14 días.
+   Usuario: ADMIN_USER (por defecto "zavaleta3").
    La contraseña vive solo en la variable de entorno ADMIN_PASSWORD de Vercel.
    Si cambias la contraseña, todas las sesiones abiertas se cierran solas. */
 import { createHmac, createHash, timingSafeEqual } from "node:crypto";
@@ -7,6 +8,7 @@ const COOKIE = "zm_admin";
 const MAX_AGE = 60 * 60 * 24 * 14;
 
 const password = () => process.env.ADMIN_PASSWORD || "";
+const username = () => (process.env.ADMIN_USER || "zavaleta3").trim().toLowerCase();
 const secret = () => createHash("sha256").update(`${password()}::${process.env.ADMIN_SECRET || "zavaleta"}`).digest();
 const sign = (payload) => createHmac("sha256", secret()).update(payload).digest("base64url");
 
@@ -17,7 +19,11 @@ function safeEqual(a, b) {
 }
 
 export const configured = () => password().length >= 8;
-export const checkPassword = (input) => configured() && safeEqual(input, password());
+export const checkLogin = (user, pass) => {
+  const okUser = safeEqual(String(user || "").trim().toLowerCase(), username());
+  const okPass = safeEqual(pass, password());
+  return configured() && okUser && okPass;
+};
 
 export function sessionCookie() {
   const exp = Math.floor(Date.now() / 1000) + MAX_AGE;

@@ -68,18 +68,18 @@
     show("login");
     $("#loginMsg").textContent = msg;
     $("#loginForm").querySelectorAll("input, button").forEach((el) => { el.disabled = disabled; });
-    if (!disabled) setTimeout(() => $("#loginForm [name=password]").focus(), 50);
+    if (!disabled) setTimeout(() => $("#loginForm [name=user]").focus(), 50);
   }
 
   $("#loginForm").addEventListener("submit", async (e) => {
     e.preventDefault();
-    const pw = e.target.password.value;
-    if (!pw) { $("#loginMsg").textContent = "Escribe la contraseña."; return; }
+    const user = e.target.user.value.trim(), pw = e.target.password.value;
+    if (!user || !pw) { $("#loginMsg").textContent = "Escribe el usuario y la contraseña."; return; }
     const btn = e.target.querySelector("button"); btn.disabled = true; $("#loginMsg").textContent = "";
     try {
-      const r = await fetch("/api/login", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ password: pw }) });
+      const r = await fetch("/api/login", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ user, password: pw }) });
       if (r.ok) { e.target.reset(); state ? showApp() : await startApp(); }
-      else $("#loginMsg").textContent = r.status === 503 ? "Falta configurar la contraseña en Vercel (ADMIN_PASSWORD)." : "Contraseña incorrecta.";
+      else $("#loginMsg").textContent = r.status === 503 ? "Falta configurar la contraseña en Vercel (ADMIN_PASSWORD)." : "Usuario o contraseña incorrectos.";
     } catch { $("#loginMsg").textContent = "Sin conexión. Inténtalo de nuevo."; }
     btn.disabled = false;
   });
