@@ -80,7 +80,7 @@ p { margin: 0 0 1em; }
 .header__inner { height: 100%; display: flex; align-items: center; gap: 24px; }
 .logo { display: flex; align-items: center; gap: 10px; color: var(--text); }
 .logo:hover { color: var(--text); }
-.logo svg { width: 34px; height: 34px; }
+.logo img { width: 48px; height: 48px; object-fit: contain; flex: none; }
 .logo__text { font: 800 1.35rem/1 var(--display); letter-spacing: -.02em; }
 .logo__text strong { color: var(--primary); font-weight: 800; }
 .nav { display: flex; gap: 26px; margin-left: auto; }
