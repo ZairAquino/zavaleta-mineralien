@@ -431,3 +431,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .photo figcaption, .hero__photo figcaption { font-size: .72rem; padding: .35em .8em; left: 10px; bottom: 10px; max-width: calc(100% - 20px); }
   .hero__photo figcaption { bottom: auto; top: 14px; }
 }
+
+/* Aviso "Próxima feria": tarjeta compacta en móvil (punto + texto, días debajo) */
+@media (max-width: 600px) {
+  .next-event { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; column-gap: 10px; row-gap: 6px; width: 100%; border-radius: 16px; padding: .75em 1em; line-height: 1.4; }
+  .next-event__dot { margin-top: .4em; }
+  .next-event__count { grid-column: 2; justify-self: start; background: var(--magenta); color: #fff; border-radius: 999px; padding: .15em .75em; font-size: .78rem; line-height: 1.4; }
+}
