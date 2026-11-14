@@ -26,7 +26,7 @@ const I18N = {
     "nav.about": "Nosotros", "nav.contact": "Contacto",
 
     "hero.eyebrow": "Mineralien aus Peru · Baviera",
-    "hero.title": "Cristales de los Andes, seleccionados a mano para Europa",
+    "hero.title": "Minerales de los Andes, seleccionados a mano para Europa",
     "hero.lead": "Zavaleta Mineralien trae a Europa minerales directamente del Perú: crisocola, rodocrosita, mangano calcita, pirita, ópalo andino, amazonita, dumortierita, serpentina y piedra para tallar. Desde Baviera, cerca de Múnich, los presentamos en las principales ferias europeas.",
     "hero.cta1": "Ver colección", "hero.cta2": "Próximas ferias", "hero.next": "Próxima feria",
 
@@ -119,7 +119,7 @@ const I18N = {
     "nav.about": "About", "nav.contact": "Contact",
 
     "hero.eyebrow": "Minerals from Peru · Bavaria",
-    "hero.title": "Crystals from the Andes, hand-selected for Europe",
+    "hero.title": "Minerals from the Andes, hand-selected for Europe",
     "hero.lead": "Zavaleta Mineralien brings minerals straight from Peru to Europe: chrysocolla, rhodochrosite, mangano calcite, pyrite, Andean opal, amazonite, dumortierite, serpentine and carving stone. From our base in Bavaria, near Munich, we exhibit at Europe's leading shows.",
     "hero.cta1": "View collection", "hero.cta2": "Upcoming shows", "hero.next": "Next show",
 
@@ -212,7 +212,7 @@ const I18N = {
     "nav.about": "Über uns", "nav.contact": "Kontakt",
 
     "hero.eyebrow": "Mineralien aus Peru · Bayern",
-    "hero.title": "Kristalle aus den Anden, handverlesen für Europa",
+    "hero.title": "Mineralien aus den Anden, handverlesen für Europa",
     "hero.lead": "Zavaleta Mineralien bringt Mineralien direkt aus Peru nach Europa: Chrysokoll, Rhodochrosit, Manganocalcit, Pyrit, Andenopal, Amazonit, Dumortierit, Serpentin und Schnitzstein. Von Bayern aus, nahe München, stellen wir auf den wichtigsten Messen Europas aus.",
     "hero.cta1": "Kollektion ansehen", "hero.cta2": "Nächste Messen", "hero.next": "Nächste Messe",
 
