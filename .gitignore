@@ -3,3 +3,5 @@
 *.bak
 .vercel
 .env*
+!.env.example
+node_modules/

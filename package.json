@@ -1,0 +1,9 @@
+{
+  "name": "zavaleta-mineralien",
+  "private": true,
+  "type": "module",
+  "description": "Web de Zavaleta Mineralien con panel de administración (funciones de Vercel + Vercel Blob).",
+  "dependencies": {
+    "@vercel/blob": "2.8.2"
+  }
+}

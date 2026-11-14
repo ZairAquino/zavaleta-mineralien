@@ -69,7 +69,7 @@
       <a href="#eventos" class="next-event" id="nextEvent" hidden></a>
     </div>
     <figure class="hero__photo">
-      <img src="img/stand-feria.webp" width="1200" height="900" fetchpriority="high" decoding="async" data-i18n-alt="hero.photoAlt" alt="Stand de Zavaleta Mineralien en una feria de minerales">
+      <img data-slot="hero" src="img/stand-feria.webp" width="1200" height="900" fetchpriority="high" decoding="async" data-i18n-alt="hero.photoAlt" alt="Stand de Zavaleta Mineralien en una feria de minerales">
       <figcaption data-i18n="hero.photoCaption">Nuestro stand en feria</figcaption>
     </figure>
   </div>
@@ -126,7 +126,7 @@
 
     <div class="showroom">
       <figure class="photo photo--events">
-        <img src="img/stand-visitantes.webp" width="1200" height="896" loading="lazy" decoding="async" data-i18n-alt="events.photoAlt" alt="">
+        <img data-slot="events" src="img/stand-visitantes.webp" width="1200" height="896" loading="lazy" decoding="async" data-i18n-alt="events.photoAlt" alt="">
         <figcaption data-i18n="events.photoCaption"></figcaption>
       </figure>
       <div class="showroom__copy">
@@ -148,7 +148,7 @@
   <div class="container">
     <div class="wholesale">
       <figure class="photo photo--wholesale">
-        <img src="img/stand-bandejas.webp" width="1200" height="896" loading="lazy" decoding="async" data-i18n-alt="dist.photoAlt" alt="">
+        <img data-slot="wholesale" src="img/stand-bandejas.webp" width="1200" height="896" loading="lazy" decoding="async" data-i18n-alt="dist.photoAlt" alt="">
         <figcaption data-i18n="dist.photoCaption"></figcaption>
       </figure>
       <div class="wholesale__copy">
@@ -170,7 +170,7 @@
 <section class="section section--alt" id="nosotros">
   <div class="container about">
     <figure class="photo photo--about">
-      <img src="img/victor-pirita.webp" width="720" height="960" loading="lazy" decoding="async" data-i18n-alt="about.photoAlt" alt="">
+      <img data-slot="about" src="img/victor-pirita.webp" width="720" height="960" loading="lazy" decoding="async" data-i18n-alt="about.photoAlt" alt="">
       <figcaption data-i18n="about.photoCaption"></figcaption>
     </figure>
     <div class="about__copy">
@@ -260,6 +260,7 @@
     <nav class="footer__links">
       <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
       <a href="impressum.html#datenschutz" data-i18n="footer.privacy">Privacidad</a>
+      <a href="admin/" class="footer__admin" rel="nofollow">Admin</a>
     </nav>
     <p class="footer__copy">© <span id="year"></span> Zavaleta Mineralien · Victor Zavaleta Management</p>
   </div>
@@ -274,6 +275,7 @@
 <script src="js/data.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/translations.js"></script>
+<script src="js/content.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

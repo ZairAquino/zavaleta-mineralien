@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Panel · Zavaleta Mineralien</title>
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- ============ ACCESO ============ -->
+<main class="login" id="loginView" hidden>
+  <form class="login__card" id="loginForm" novalidate>
+    <img src="/img/logo.webp" alt="" width="72" height="72">
+    <h1>Panel de administración</h1>
+    <p class="muted">Zavaleta Mineralien</p>
+    <label class="field">
+      <span>Contraseña</span>
+      <input type="password" name="password" autocomplete="current-password" required>
+    </label>
+    <button class="btn btn--primary btn--block" type="submit">Entrar</button>
+    <p class="login__msg" id="loginMsg" role="alert"></p>
+    <a class="muted small" href="/">← Volver a la web</a>
+  </form>
+</main>
+
+<!-- ============ PANEL ============ -->
+<div class="app" id="appView" hidden>
+  <header class="topbar">
+    <a class="brand" href="/" target="_blank" rel="noopener" title="Abrir la web">
+      <img src="/img/logo.webp" alt="" width="40" height="40">
+      <span><strong>Zavaleta</strong> · Panel</span>
+    </a>
+    <div class="topbar__actions">
+      <a class="btn btn--ghost btn--sm" href="/" target="_blank" rel="noopener">Ver web ↗</a>
+      <button class="btn btn--ghost btn--sm" type="button" id="logoutBtn">Salir</button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs" role="tablist">
+    <button type="button" role="tab" data-tab="gallery" aria-selected="true">Galería</button>
+    <button type="button" role="tab" data-tab="events">Ferias</button>
+    <button type="button" role="tab" data-tab="photos">Fotos de la web</button>
+    <button type="button" role="tab" data-tab="texts">Textos</button>
+    <button type="button" role="tab" data-tab="contact">Contacto</button>
+  </nav>
+
+  <div class="langbar" id="langBar">
+    <span>Idioma de los textos:</span>
+    <div class="langbar__list" id="langList"></div>
+  </div>
+
+  <main class="panel" id="panel"></main>
+
+  <footer class="savebar">
+    <span class="savebar__status" id="saveStatus">Todo guardado</span>
+    <button class="btn btn--primary" type="button" id="saveBtn" disabled>Guardar cambios</button>
+  </footer>
+</div>
+
+<p class="boot" id="bootMsg">Cargando…</p>
+<input type="file" id="filePick" accept="image/*" hidden>
+
+<script src="/js/data.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/translations.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

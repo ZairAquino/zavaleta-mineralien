@@ -1,5 +1,6 @@
 /* Lógica de la web — normalmente no necesitas editar este archivo. */
-(() => {
+(async () => {
+  await window.SITE_CONTENT; // lo guardado desde /admin (si existe)
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -23,7 +24,7 @@
     return s;
   };
   const locale = () => ({ de: "de-DE", en: "en-GB", es: "es-ES", fr: "fr-FR", it: "it-IT", cs: "cs-CZ", pl: "pl-PL", nl: "nl-NL" }[lang]);
-  const L = (obj) => (obj && (obj[lang] ?? obj.en ?? obj.es)) || "";
+  const L = (obj) => (obj && (obj[lang] || obj.en || obj.es || obj.de)) || "";
   const money = (n) => new Intl.NumberFormat(locale(), { style: "currency", currency: CONFIG.currency, maximumFractionDigits: 0 }).format(n);
 
   function applyLang() {

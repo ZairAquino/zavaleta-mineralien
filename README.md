@@ -42,3 +42,25 @@ La web está en 8 idiomas: alemán, inglés, español, francés, italiano, checo
 - Textos de alemán, inglés y español: `js/i18n.js`.
 - Textos de francés, italiano, checo, polaco y neerlandés (web y catálogo): `js/translations.js`.
 - Si añades un producto nuevo en `data.js` y no lo traduces, en esos 5 idiomas se muestra en inglés.
+
+## Panel de administración (`/admin`)
+
+En **https://zavaletamineralien.de/admin/** (también hay un enlace «Admin» en el pie de página) el administrador puede, sin tocar código:
+
+- **Galería**: añadir piezas con foto, cambiar fotos, nombre, origen, categoría, formatos y descripción (en los 8 idiomas), ordenar y eliminar.
+- **Ferias**: añadir, editar y borrar ferias (fechas, ciudad, país, stand, estado, web).
+- **Fotos de la web**: cambiar las fotos grandes de Portada, Ferias, Mayoristas y Nosotros.
+- **Textos**: cambiar cualquier texto fijo de la web, idioma por idioma.
+- **Contacto**: email, teléfonos, WhatsApp, dirección, Instagram.
+
+Todo se guarda en **Vercel Blob** (almacén `zavaleta-media`) y la web lo muestra en unos segundos.
+Cada vez que se guarda se crea además una copia en `backups/`.
+
+### Configuración (una sola vez)
+1. En Vercel → proyecto *zavaleta-mineralien* → **Settings → Environment Variables**, crea
+   `ADMIN_PASSWORD` (mínimo 8 caracteres) para *Production*.
+2. Vuelve a desplegar (Deployments → ⋯ → Redeploy) para que la tome.
+3. Para cambiar la contraseña: edita la variable y vuelve a desplegar (las sesiones abiertas se cierran solas).
+
+`BLOB_READ_WRITE_TOKEN` ya está conectado al proyecto. Lo que no se ha editado en el panel sigue saliendo de `js/data.js`.
+En GitHub Pages el panel no funciona (no hay servidor); la web sí, con los datos de `js/data.js`.
