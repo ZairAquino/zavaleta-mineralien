@@ -470,3 +470,24 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .gitem strong { font-size: .98rem; }
   .modal__media { min-height: 300px; }
 }
+
+/* ---------- Botón flotante: tienda online ---------- */
+.shop-fab { position: fixed; right: 20px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 70;
+  display: inline-flex; align-items: center; gap: .55em; padding: .8em 1.3em .8em 1.05em; border-radius: 999px;
+  background: var(--primary); color: #fff; border: 2px solid var(--text); box-shadow: var(--pop);
+  font-weight: 700; font-size: .95rem; white-space: nowrap; transition: transform .15s, box-shadow .15s; }
+.shop-fab svg { width: 22px; height: 22px; flex: none; }
+.shop-fab:hover { color: #fff; transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--text); }
+.shop-fab:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--text); }
+@media (max-width: 600px) {
+  .shop-fab { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); padding: .7em 1.1em .7em .9em; font-size: .88rem; }
+}
+
+/* Enlace a la tienda en el menú */
+.nav .nav__shop { display: inline-flex; align-items: center; gap: .4em; margin: -.45em 0; padding: .45em 1em .45em .8em; border: 2px solid var(--text); border-radius: 999px; background: var(--primary); color: #fff; box-shadow: 3px 3px 0 var(--text); transition: transform .15s, box-shadow .15s; }
+.nav .nav__shop svg { width: 17px; height: 17px; flex: none; }
+.nav .nav__shop::after { display: none; }
+.nav .nav__shop:hover { color: #fff; transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--text); }
+@media (max-width: 980px) {
+  .nav .nav__shop { align-self: flex-start; margin: 16px 0 0; padding: .65em 1.2em .65em 1em; border-bottom: 2px solid var(--text); }
+}

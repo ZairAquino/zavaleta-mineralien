@@ -2,6 +2,8 @@
    Textos de la web (UI) + textos del catálogo. Si falta una clave, se usa el inglés. */
 Object.assign(I18N, {
   fr: {
+    "shop.nav": "Boutique",
+    "shop.cta": "Boutique en ligne",
     "gallery.next": "Suivant",
     "gallery.prev": "Précédent",
     "gallery.askMsg": "Bonjour, je suis intéressé(e) par : {name}. Pouvez-vous m'envoyer plus d'informations ?",
@@ -76,6 +78,8 @@ Object.assign(I18N, {
   },
 
   it: {
+    "shop.nav": "Negozio",
+    "shop.cta": "Negozio online",
     "gallery.next": "Successivo",
     "gallery.prev": "Precedente",
     "gallery.askMsg": "Buongiorno, mi interessa: {name}. Potete inviarmi più informazioni?",
@@ -150,6 +154,8 @@ Object.assign(I18N, {
   },
 
   cs: {
+    "shop.nav": "E-shop",
+    "shop.cta": "E-shop",
     "gallery.next": "Další",
     "gallery.prev": "Předchozí",
     "gallery.askMsg": "Dobrý den, mám zájem o: {name}. Můžete mi poslat více informací?",
@@ -224,6 +230,8 @@ Object.assign(I18N, {
   },
 
   pl: {
+    "shop.nav": "Sklep",
+    "shop.cta": "Sklep online",
     "gallery.next": "Następne",
     "gallery.prev": "Poprzednie",
     "gallery.askMsg": "Dzień dobry, interesuje mnie: {name}. Czy mogą Państwo przesłać więcej informacji?",
@@ -298,6 +306,8 @@ Object.assign(I18N, {
   },
 
   nl: {
+    "shop.nav": "Winkel",
+    "shop.cta": "Webwinkel",
     "gallery.next": "Volgende",
     "gallery.prev": "Vorige",
     "gallery.askMsg": "Hallo, ik heb interesse in: {name}. Kunt u mij meer informatie sturen?",

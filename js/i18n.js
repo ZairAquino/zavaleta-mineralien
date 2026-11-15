@@ -1,6 +1,8 @@
 /* Textos de la web en alemán, inglés y español. */
 const I18N = {
   es: {
+    "shop.nav": "Tienda",
+    "shop.cta": "Tienda online",
     "gallery.next": "Siguiente",
     "gallery.prev": "Anterior",
     "gallery.askMsg": "Hola, me interesa: {name}. ¿Podrían darme más información?",
@@ -98,6 +100,8 @@ const I18N = {
   },
 
   en: {
+    "shop.nav": "Shop",
+    "shop.cta": "Online shop",
     "gallery.next": "Next",
     "gallery.prev": "Previous",
     "gallery.askMsg": "Hello, I'm interested in: {name}. Could you send me more information?",
@@ -195,6 +199,8 @@ const I18N = {
   },
 
   de: {
+    "shop.nav": "Shop",
+    "shop.cta": "Online-Shop",
     "gallery.next": "Weiter",
     "gallery.prev": "Zurück",
     "gallery.askMsg": "Hallo, ich interessiere mich für: {name}. Können Sie mir mehr Informationen schicken?",
